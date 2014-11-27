@@ -1,0 +1,53 @@
+ private class InitServices extends AsyncTask<Activity, Void, MapView> {
+        private Activity parentActivity;
+        protected MapView doInBackground(Activity... p) {
+            parentActivity = p[0];
+            MapView v = new MapView(parentActivity);
+            Looper.prepare();
+            v.onCreate(null);
+            v.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+            Looper.loop();
+            return v;
+        }
+
+        protected void onProgressUpdate(Void progress) {
+            // Todo: Update progress
+            //setProgressPercent(progress[0]);
+        }
+
+        protected void onPostExecute(MapView v) {
+            ((FrameLayout) parentActivity.findViewById(R.id.map_container)).addView(v);
+            parentActivity.findViewById(R.id.mainProgressBar).setVisibility(View.INVISIBLE);
+            //showDialog("Downloaded " + result + " bytes");
+
+        }
+    }
+
+    private void MapOn() {
+         /*/ map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))
+        //        .getMap();
+
+        //getSupportFragmentManager().beginTransaction()
+        //        .add(R.id.map_container, firstFragment).commit();
+
+        map.getUiSettings().setZoomControlsEnabled(false);
+        map.getUiSettings().setCompassEnabled(true);
+        map.getUiSettings().setMyLocationButtonEnabled(true);
+        //map.getUiSettings().
+        Marker hamburg = map.addMarker(new MarkerOptions().position(HAMBURG)
+                .title("Hamburg"));
+        Marker kiel = map.addMarker(new MarkerOptions()
+                .position(KIEL)
+                .title("Kiel")
+                .snippet("Kiel is cool")
+                .icon(BitmapDescriptorFactory
+                        .fromResource(R.drawable.ic_logo_down)));
+
+        // Move the camera instantly to hamburg with a zoom of 15.
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(HAMBURG, 15));
+
+        // Zoom in, animating the camera.
+        map.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
+        //mapView.setBuiltInZoomControls(true);*/
+    }
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="action_main">Inicio</string>
+    <string name="action_profile">Perfil</string>
+    <string name="action_share">Compartir</string>
+    <string name="action_friends">Invitar Amigos</string>
+    <string name="action_drive">Conducir</string>
+    <string name="action_help">Ayuda</string>
+
+</resources>

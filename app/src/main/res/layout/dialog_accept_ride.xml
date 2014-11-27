@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="@drawable/background_white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:baselineAligned="false"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical|left">
+
+                <FrameLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="#999999">
+
+                    <ImageView
+                        android:id="@+id/dialog_accept_ride_avatar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true" />
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dialog_accept_ride_avatar_progress"
+                        android:layout_gravity="center_horizontal|center_vertical" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:id="@+id/dialog_accept_ride_name"
+                        android:layout_height="20dp"
+                        android:textColor="#6E6E6E"
+                        android:gravity="left|center_vertical"
+                        android:textSize="18sp"
+                        android:textAlignment="viewStart"
+                        android:layout_marginBottom="3dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:gravity="left|center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/txtreputacion"
+                            android:layout_height="wrap_content"
+                            android:textColor="#6E6E6E"
+                            android:text="@string/dialog_accept_ride_reputation"
+                            android:autoText="false"
+                            android:gravity="left|center_vertical"
+                            android:textSize="14sp"
+                            android:textAlignment="viewStart" />
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:progressDrawable="@drawable/layers_ratingbar_star"
+                            android:id="@+id/ratingBarUser" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/dialog_accept_ride_origin"
+                android:background="@drawable/layers_textview_white"
+                android:drawableLeft="@drawable/icon_logo_textview"
+                android:layout_height="50dp"
+                android:textColor="#6E6E6E"
+                android:gravity="left|center_vertical"
+                android:textSize="18sp"
+                android:textAlignment="viewStart"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/txtDestinationOverlay"
+                android:background="@drawable/layers_textview_white"
+                android:drawableLeft="@drawable/icon_flag_gray"
+                android:drawablePadding="10dp"
+                android:paddingLeft="5dp"
+                android:layout_height="50dp"
+                android:textColor="#6E6E6E"
+                android:autoText="false"
+                android:gravity="left|center_vertical"
+                android:textSize="16sp"
+                android:textAlignment="viewStart"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/txtAmountOverlay"
+                android:background="@drawable/layers_textview_white"
+                android:drawableLeft="@drawable/icon_bill"
+                android:drawablePadding="10dp"
+                android:paddingLeft="5dp"
+                android:layout_height="50dp"
+                android:textColor="#6E6E6E"
+                android:autoText="false"
+                android:gravity="left|center_vertical"
+                android:textSize="16sp"
+                android:textAlignment="viewStart"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp" />
+
+            <fragment
+                android:id="@+id/dialog_accept_ride_map_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/dialog_accept_ride_button_confirm"
+                android:textAlignment="center"
+                android:background="@drawable/selector_button_lightblue"
+                android:layout_gravity="bottom"
+                android:text="@string/dialog_accept_ride_button_confirm"
+                android:textColor="#F2F2F2"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/dialog_accept_ride_button_cancel"
+                android:textAlignment="center"
+                android:background="@drawable/selector_button_pink"
+                android:layout_gravity="bottom"
+                android:text="@string/dialog_accept_ride_button_cancel"
+                android:textColor="#F2F2F2"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
